@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<% unless @person.crews.empty? %>
+  <p><strong>Movies</strong><br/>
+  <% @person.crews.each do |crew| %>
+    <%= crew.movie.name %> (<%= crew.role %>)<br/>
+  <% end %>
+<% end %>
+
+<p>
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
+</p>

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MovieSite</title>
+  <title>Movie Site</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<h1>Movie Site</h1>
+
 <%= yield %>
+
+<p>&nbsp;</p>
+<hr />
+
+<ul>
+<li><%= link_to 'All movies', movies_path %></li>
+<li><%= link_to 'All people', people_path %></li>
+</ul>
 
 </body>
 </html>
